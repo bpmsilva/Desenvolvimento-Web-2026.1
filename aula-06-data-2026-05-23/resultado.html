@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado do Formulário</title>
+</head>
+
+<body>
+
+  <h1>Dados Recebidos</h1>
+
+  <section id="resultado">
+    <p>Nenhum dado foi recebido.</p>
+  </section>
+
+  <p>
+    <a href="formulario.html">Voltar ao formulário</a>
+  </p>
+
+  <script>
+    const parametros = new URLSearchParams(window.location.search);
+
+    const resultado = document.getElementById("resultado");
+
+    const nome = parametros.get("nome");
+    const email = parametros.get("email");
+    const idade = parametros.get("idade");
+    const curso = parametros.get("curso");
+    const turno = parametros.get("turno");
+    const satisfacao = parametros.get("satisfacao");
+    const cor = parametros.get("cor");
+    const mensagem = parametros.get("mensagem");
+
+    const interesses = parametros.getAll("interesses");
+
+    if (parametros.size > 0) {
+      resultado.innerHTML = `
+        <p><strong>Nome:</strong> ${nome || "Não informado"}</p>
+        <p><strong>E-mail:</strong> ${email || "Não informado"}</p>
+        <p><strong>Idade:</strong> ${idade || "Não informada"}</p>
+        <p><strong>Curso:</strong> ${curso || "Não selecionado"}</p>
+        <p><strong>Turno:</strong> ${turno || "Não selecionado"}</p>
+
+        <p>
+          <strong>Interesses:</strong>
+          ${interesses.length > 0 ? interesses.join(", ") : "Nenhum interesse selecionado"}
+        </p>
+
+        <p><strong>Nível de satisfação:</strong> ${satisfacao || "Não informado"}</p>
+
+        <p>
+          <strong>Cor favorita:</strong>
+          ${cor || "Não informada"}
+          <span
+            style="
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-color: ${cor || "#ffffff"};
+              border: 1px solid #000;
+              vertical-align: middle;
+            ">
+          </span>
+        </p>
+
+        <p><strong>Mensagem:</strong> ${mensagem || "Nenhuma mensagem enviada"}</p>
+      `;
+    }
+  </script>
+
+</body>
+
+</html>

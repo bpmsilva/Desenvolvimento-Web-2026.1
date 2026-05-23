@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Input em HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tipos de Input em HTML</h1>
+        <p>Esta página demonstra os principais tipos de campos usados em formulários HTML.</p>
+    </header>
+
+    <main>
+        <form action="resultado.html" method="get">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <p>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
+                </p>
+                <p>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" autocomplete="email"
+                        required>
+                </p>
+                <p>
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" minlength="6"
+                        autocomplete="new-password" required>
+                </p>
+                <p>
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(75) 99999-9999" autocomplete="tel">
+                </p>
+                <p>
+                    <label for="idade">Idade:</label><br>
+                    <input type="number" id="idade" name="idade" min="0" max="120" step="1">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datas e horários</legend>
+                <p>
+                    <label for="data-nascimento">Data de nascimento:</label><br>
+                    <input type="date" id="data-nascimento" name="data_nascimento">
+                </p>
+                <p>
+                    <label for="horario">Horário:</label><br>
+                    <input type="time" id="horario" name="horario">
+                </p>
+                <p>
+                    <label for="data-hora">Data e hora:</label><br>
+                    <input type="datetime-local" id="data-hora" name="data_hora">
+                </p>
+                <p>
+                    <label for="mes">Mês:</label><br>
+                    <input type="month" id="mes" name="mes">
+                </p>
+
+                <p>
+                    <label for="semana">Semana:</label><br>
+                    <input type="week" id="semana" name="semana">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferências</legend>
+                <p>
+                    <label for="cor-favorita">Cor favorita:</label><br>
+                    <input type="color" id="cor-favorita" name="cor_favorita" value="#3366ff">
+                </p>
+                <p>
+                    <label for="nivel-satisfacao">Nível de satisfação:</label><br>
+                    <input type="range" id="nivel-satisfacao" name="nivel_satisfacao" min="0" max="10" step="1"
+                        value="5">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Áreas de interesse</legend>
+                <p>Selecione uma ou mais opções:</p>
+                <p>
+                    <input type="checkbox" id="interesse-html" name="interesses" value="html">
+                    <label for="interesse-html">HTML</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="interesse-css" name="interesses" value="css">
+                    <label for="interesse-css">CSS</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="interesse-js" name="interesses" value="javascript">
+                    <label for="interesse-js">JavaScript</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Turno preferido</legend>
+                <p>Escolha apenas uma opção:</p>
+                <p>
+                    <input type="radio" id="turno-manha" name="turno" value="manha" required>
+                    <label for="turno-manha">Manhã</label>
+                </p>
+                <p>
+                    <input type="radio" id="turno-tarde" name="turno" value="tarde">
+                    <label for="turno-tarde">Tarde</label>
+                </p>
+                <p>
+                    <input type="radio" id="turno-noite" name="turno" value="noite">
+                    <label for="turno-noite">Noite</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Arquivo</legend>
+                <p>
+                    <label for="foto">Envie uma imagem:</label><br>
+                    <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Outros elementos comuns de formulário</legend>
+                <p>
+                    <label for="curso">Curso:</label><br>
+                    <select id="curso" name="curso">
+                        <option value="">Selecione uma opção</option>
+                        <option value="informatica">Informática</option>
+                        <option value="computacao">Computação</option>
+                        <option value="sistemas">Sistemas</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="cidade">Cidade:</label><br>
+                    <input type="text" id="cidade" name="cidade" list="lista-cidades"
+                        placeholder="Digite ou escolha uma cidade">
+
+                    <datalist id="lista-cidades">
+                        <option value="Salvador">
+                        <option value="Valença">
+                        <option value="Santo Antônio de Jesus">
+                        <option value="Feira de Santana">
+                    </datalist>
+                </p>
+                <p>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Digite sua mensagem"></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Botões</legend>
+                <p>
+                    <input type="submit" value="Enviar formulário">
+                </p>
+                <p>
+                    <input type="reset" value="Limpar formulário">
+                </p>
+                <p>
+                    <button type="button">
+                        Botão comum
+                    </button>
+                </p>
+                <p>
+                    <button type="submit">
+                        Botão de envio
+                    </button>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
