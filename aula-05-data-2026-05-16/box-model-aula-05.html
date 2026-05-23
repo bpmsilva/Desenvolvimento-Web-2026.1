@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            border: 3px solid black;
+        }
+
+        body {
+            text-align: center;
+            background-color: lightgray;
+            padding: 16px;
+        }
+
+        h1 {
+            color: white;
+            background-color:crimson;
+        }
+
+        .box {
+            width: 250px;
+            display: inline-block;
+        }
+
+        #margin {
+            margin-top: 32px;
+        }
+
+        #padding {
+            padding-top: 32px;
+        }
+
+        #container {
+            padding: 32px 0px;
+        }
+
+        #outter-border {
+            border-top: 3px dashed gray;
+            border-bottom: 3px dashed gray;
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        #container-button {
+            padding: 16px;
+        }
+
+        button {
+            font-family: "Plus Jakarta Sans";
+
+            color: white;
+            background-color: rgb(130, 52, 233);
+
+            /* Três formas de especificar padding */
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-right: 16px;
+            padding-left: 16px;
+
+            /* cima, direita, baixo, esquerda */
+            padding: 14px 16px 14px 16px;
+
+            /* cima-baixo e direita-esquerda */
+            padding: 14px 16px;
+
+            border-radius: 10px;
+            border: 0px;
+
+            font-weight: 700;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="outter-border">
+            <h1 id="margin" class="box">Margem</h1>
+            <h1 id="padding" class="box">Preenchimento</h1>
+        </div>
+    </div>
+    <div id="container-button">
+        <button>Começar gratuitamente</button>
+    </div>
+</body>
+
+</html>
