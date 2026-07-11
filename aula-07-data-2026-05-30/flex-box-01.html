@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            border: 3px solid black;
+        }
+
+        #red { background-color: red; }
+        #blue { background-color: blue; }
+        #green { background-color: green; }
+        #yellow { background-color: yellow; }
+        #purple { background-color: purple; }
+        #orange { background-color: orange; }
+        #pink { background-color: pink; }
+
+        .box {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-around; /* Na horizontal */
+
+            height: 50vh;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="red" class="box"></div>
+        <div id="blue" class="box"></div>
+        <div id="green" class="box"></div>
+        <div id="yellow" class="box"></div>
+        <div id="purple" class="box"></div>
+        <div id="orange" class="box"></div>
+        <div id="pink" class="box"></div>
+    </div>
+</body>
+</html>
