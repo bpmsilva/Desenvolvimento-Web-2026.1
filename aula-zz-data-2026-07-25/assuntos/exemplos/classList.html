@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destaque {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="mensagem">Olá!</p>
+    <button id="btn">Alternar</button>
+    <script>
+        const mensagem = document.querySelector("#mensagem");
+        const botao = document.querySelector("#btn");
+
+        botao.addEventListener("click", () => {
+            mensagem.classList.toggle("destaque");
+        });
+    </script>
+</body>
+
+</html>
